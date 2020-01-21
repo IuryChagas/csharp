@@ -8,30 +8,13 @@ using System.Globalization;
 namespace Course {
     class Program {
         static void Main(string[] args) {
-           Funcionario funcionario1, funcionario2;
-
-            funcionario1 = new Funcionario();
-            funcionario2 = new Funcionario();
-
-            Console.WriteLine("Dados do primeiro funcionário: ");
-            Console.Write("Nome: ");
-            funcionario1.Nome = Console.ReadLine();
-            Console.Write("Salário: ");
-            funcionario1.Salario = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-            Console.WriteLine("");
-
-            Console.WriteLine("Dados do segundo funcionário: ");
-            Console.Write("Nome: ");
-            funcionario2.Nome = Console.ReadLine();
-            Console.Write("Salário: ");
-            funcionario2.Salario = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-            double mediaSalario = (funcionario1.Salario + funcionario2.Salario) / 2;
-
-            Console.WriteLine("");
-            Console.WriteLine($" ### Salário médio: {mediaSalario.ToString("F2", CultureInfo.InvariantCulture)}  ###");
-            Console.WriteLine("");
+            Caneta canetaPremium = new Caneta();
+            canetaPremium.Modelo = "Mont Blanc";
+            canetaPremium.Cor = "Preta";
+            canetaPremium.Ponta = 0.5d;
+            canetaPremium.Carga = 100;
+            canetaPremium.Tampa = false;
+            canetaPremium.status();
         }
     }
 }
