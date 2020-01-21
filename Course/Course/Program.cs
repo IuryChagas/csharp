@@ -4,30 +4,19 @@ namespace Course {
     class Program {
         static void Main(string[] args) {
 
-            Console.WriteLine("Digite três números na mesma linha separados por um espaço: ");
-            string[] vet = Console.ReadLine().Split(' ');
+            Console.WriteLine("##########  SCRIPT RETORNA A RAIZ QUADRADA DO NÚMERO DIGITADO ########## ");
+            Console.Write("Digite um número: ");
+            double x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            int n1 = int.Parse(vet[0]);
-            int n2 = int.Parse(vet[1]);
-            int n3 = int.Parse(vet[2]);
+            while (x >= 0.0){
+                double raiz = Math.Sqrt(x);
+                Console.WriteLine(raiz.ToString("F3", CultureInfo.InvariantCulture));
 
-            double resultado = MaiorNumero(n1, n2, n3);
-            Console.WriteLine("O Maior número é: "+ resultado);
-        }
-
-        static int MaiorNumero(int a, int b, int c) {
-            int maiorDeTodos;
-
-            if (a > b && a > c) {
-                maiorDeTodos  = a;
+                Console.Write("Digite um número: ");
+                x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             }
-            else if (b > c) {
-                maiorDeTodos = b;
-            }
-            else {
-                maiorDeTodos = c;
-            }
-            return maiorDeTodos;
+
+            Console.WriteLine("Número negativo!");
         }
     }
 }
