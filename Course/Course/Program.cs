@@ -3,20 +3,25 @@ using System.Globalization;
 namespace Course {
     class Program {
         static void Main(string[] args) {
+            int soma = 0;
 
-            Console.WriteLine("##########  SCRIPT RETORNA A RAIZ QUADRADA DO NÚMERO DIGITADO ########## ");
-            Console.Write("Digite um número: ");
-            double x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine("### DIGITE A QUANTIDADE DE NÚMEROS QUE QUER SOMAR ###");
 
-            while (x >= 0.0){
-                double raiz = Math.Sqrt(x);
-                Console.WriteLine(raiz.ToString("F3", CultureInfo.InvariantCulture));
+            Console.Write("Quantos números inteiros quer somar: ");
+            int y = int.Parse(Console.ReadLine());
 
-                Console.Write("Digite um número: ");
-                x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine("");
+
+            for (int i = 1; i <= y; i++){
+                Console.Write(i +"° valor: ");
+                int numero = int.Parse(Console.ReadLine());
+                soma += numero;
             }
+            
+            Console.WriteLine("");
 
-            Console.WriteLine("Número negativo!");
+            Console.WriteLine("Soma total dos números digitados: "+ soma);
+            
         }
     }
 }
