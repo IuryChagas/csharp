@@ -5,52 +5,41 @@ using System.Globalization;
 namespace Course {
     class Program {
         static void Main(string[] args) {
-            Triangulo x, y;
+            Console.WriteLine("### Cadastro de Produtos no Estoque ###");
 
-            x = new Triangulo();
-            y = new Triangulo();
+            Produto produto = new Produto();
 
-            Console.WriteLine("Entre com as medidas do triângulo X: ");
-            Console.Write("Digite o valor do lado xA: ");
-            x.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Console.Write("Digite o valor do lado xB: ");
+            Console.WriteLine("");
+            Console.WriteLine("Adicione as informações do produto: \n");
+            
+            Console.Write("Nome: ");
+            produto.Nome = Console.ReadLine();
 
-            x.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Console.Write("Digite o valor do lado xC: ");
-            x.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("Preço: ");
+            produto.Preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            Console.Write("Quantidade no estoque: ");
+            produto.Quantidade = int.Parse(Console.ReadLine());
 
             Console.WriteLine("");
 
-            Console.WriteLine("Entre com as medidas do triângulo Y: ");
-            Console.Write("Digite o valor do lado yA: ");
-
-            y.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Console.Write("Digite o valor do lado yB: ");
-
-            y.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Console.Write("Digite o valor do lado yC: ");
-
-            y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-
-            double areaX = x.Area();    
-            double areaY = y.Area();
+            Console.WriteLine($"Dados do produto: {produto}");
 
             Console.WriteLine("");
-
-            Console.WriteLine($"Área de X: {areaX.ToString("F4", CultureInfo.InvariantCulture)}");
-            Console.WriteLine($"Área de Y: {areaY.ToString("F4", CultureInfo.InvariantCulture)}");
-
-            if (areaX > areaY) {
-                Console.WriteLine("Maior área: X");
-            }
-            else {
-                Console.WriteLine("Maior área: Y");
-            }
+            Console.Write("Digite a quantidade de produtos a ser adicionados ao estoque: ");
+            int quantidade = int.Parse(Console.ReadLine());
+            produto.AdicionarProdutos(quantidade);
 
             Console.WriteLine("");
+            Console.WriteLine($"Dados atualizados: {produto}");
 
+            Console.WriteLine("");
+            Console.Write("Digite a quantidade de produtos a ser removido do estoque: ");
+            int removeQuantidade = int.Parse(Console.ReadLine());
+            produto.RemoverProdutos(removeQuantidade);
 
+            Console.WriteLine("");
+            Console.WriteLine($"Dados atualizados: {produto}");
         }
     }
 }
