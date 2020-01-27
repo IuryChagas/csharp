@@ -18,6 +18,13 @@ namespace Constructions {
             
         }
 
+        public Produto(string nome, double preco) {
+            Nome = nome;
+            Preco = preco;
+            Quantidade = 5;
+            
+        }
+
         public void AdicionarProdutos(int quantidade) {
             Quantidade += quantidade;
 
