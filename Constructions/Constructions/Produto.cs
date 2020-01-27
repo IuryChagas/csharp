@@ -12,17 +12,21 @@ namespace Constructions {
         public int Quantidade;
 
         public Produto(string nome, double preco, int quantidade) {
-            Nome = nome;
-            Preco = preco;
+            this.Nome = nome;
+            this.Preco = preco;
             Quantidade = quantidade;
-            
+
         }
 
         public Produto(string nome, double preco) {
             Nome = nome;
             Preco = preco;
             Quantidade = 5;
-            
+
+        }
+        public Produto(string nome, double preco) {
+            Nome = nome;
+            Preco = preco;
         }
 
         public void AdicionarProdutos(int quantidade) {

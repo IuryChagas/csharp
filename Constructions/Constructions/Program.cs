@@ -15,7 +15,15 @@ namespace Constructions {
             Console.Write("Preço: ");
             double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            Produto produto = new Produto(nome, preco);
+            Produto produto0 = new Produto();
+
+            Produto produto1 = new Produto();
+
+            Produto produto2 = new Produto {
+                Nome = "TV",
+                Preco = 500.00,
+                Quantidade = 20
+            };
 
             Console.WriteLine("");
 
