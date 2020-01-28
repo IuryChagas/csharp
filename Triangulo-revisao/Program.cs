@@ -4,34 +4,42 @@ using System.Globalization;
 namespace Triangulo_revisao{
     class Program{
         static void Main(string[] args){
-            double xA, xB, xC, px, yA, yB, yC, py, areaX, areaY;
+            
+            double areaX, areaY, p;
+
+            Triangulo x, y;
+
+            x = new Triangulo();
+            y = new Triangulo();
 
             Console.WriteLine("Medidas do triangulo X: ");
             System.Console.WriteLine("");
 
             System.Console.Write("Valor de xA: ");    
-            xA = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            x.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             System.Console.Write("Valor de xB: ");
-            xB = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            x.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             System.Console.Write("Valor de xC: ");
-            xC = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            x.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            px = (xA + xB + xC) / 2;
-            areaX = Math.Sqrt(px * (px - xA) * (px - xB) * (px - xC));
+            p = (x.A + x.B + x.C) / 2;
+            areaX = Math.Sqrt(p * (p - x.A) * (p - x.B) * (p - x.C));
 
+            Console.WriteLine("");
+            Console.WriteLine("Medidas do triangulo Y: ");
             Console.WriteLine("");
 
             System.Console.Write("Valor de yA: ");
-            yA = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            y.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             System.Console.Write("Valor de yB: ");
-            yB = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            y.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             System.Console.Write("Valor de yC: ");
-            yC = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            py = (yA + yB + yC) / 2;
-            areaY = Math.Sqrt(py * (py - yA) * (py - yB) * (py - yC));
+            p = (y.A + y.B + y.C) / 2;
+            areaY = Math.Sqrt(p * (p - y.A) * (p - y.B) * (p - y.C));
 
             double maiorArea;
 
