@@ -24,8 +24,7 @@ namespace Triangulo_revisao{
             System.Console.Write("Valor de xC: ");
             x.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            p = (x.A + x.B + x.C) / 2;
-            areaX = Math.Sqrt(p * (p - x.A) * (p - x.B) * (p - x.C));
+            areaX = x.Area();
 
             Console.WriteLine("");
             Console.WriteLine("Medidas do triangulo Y: ");
@@ -38,8 +37,7 @@ namespace Triangulo_revisao{
             System.Console.Write("Valor de yC: ");
             y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            p = (y.A + y.B + y.C) / 2;
-            areaY = Math.Sqrt(p * (p - y.A) * (p - y.B) * (p - y.C));
+            areaY = y.Area();
 
             double maiorArea;
 
