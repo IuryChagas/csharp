@@ -11,6 +11,9 @@ namespace revisao_s01_a_s04 {
             Preco = preco;
             Quantidade = quantidade;
         }
+        public Produto(){
+            
+        }
         public double ValorTotalEmEstoque(){
             return Quantidade * Preco;
         }
