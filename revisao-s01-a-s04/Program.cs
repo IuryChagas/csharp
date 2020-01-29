@@ -4,15 +4,38 @@ using System.Globalization;
 namespace revisao_s01_a_s04 {
     class Program {
         static void Main(string[] args){
-            System.Console.Write("Qual a cotação do dolar: ");
-            double cotacao = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            
+            System.Console.Write("Nome: ");
+            string nome = Console.ReadLine();
 
-            System.Console.Write("Quantos dolares à comprar: ");
-            double quantia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            System.Console.Write("Preço: ");
+            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            double resultado = ConversorDeMoeda.DolarParaReal(quantia, cotacao);
+            System.Console.Write("Quantidade no estoque: ");
+            int quantidade = int.Parse(Console.ReadLine());
 
-            System.Console.WriteLine("Valor a ser pago em reais: "+ resultado.ToString("F2", CultureInfo.InvariantCulture));
+            Produto produto = new Produto(nome, preco, quantidade);
+
+            System.Console.WriteLine($"Dados do Produto: {produto}");
+            System.Console.WriteLine();
+
+
+            System.Console.Write("Digite o n° de produtos à ser adicionados ao estoque: ");
+            int qtd = int.Parse(Console.ReadLine());
+            produto.AdicionarProdutos(qtd);
+
+            System.Console.WriteLine();
+            System.Console.WriteLine($"Dados atualizados: {produto}");
+
+            System.Console.WriteLine();
+
+            System.Console.Write("Digite o n° de produtos à ser removidos do estoque: ");
+            qtd = int.Parse(Console.ReadLine());
+            produto.RemoverProdutos(qtd);
+
+            System.Console.WriteLine();
+            System.Console.WriteLine($"Dados atualizados: {produto}");
+
         }            
     }
 }
