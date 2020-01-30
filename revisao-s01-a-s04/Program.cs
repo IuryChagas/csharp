@@ -13,7 +13,7 @@ namespace revisao_s01_a_s04 {
                 System.Console.Write("Setar um novo valor: ");
                 product.Nome = Console.ReadLine();
 
-                System.Console.WriteLine("\n");
+                System.Console.WriteLine(""+product.Nome);
         }
     }
 }
