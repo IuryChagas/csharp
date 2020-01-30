@@ -2,35 +2,52 @@ using System.Globalization;
 
 namespace revisao_s01_a_s04 {
     public class Produto {
-        public string Nome;
-        public double Preco;
-        public int Quantidade;
+        private string _nome;
+        private double _preco;
+        private int _quantidade;
+
+        public Produto(){
+        }
 
         public Produto (string nome, double preco, int quantidade){
-            Nome = nome;
-            Preco = preco;
-            Quantidade = quantidade;
+            _nome = nome;
+            _preco = preco;
+            _quantidade = quantidade;
         }
-        public Produto(){
+
+        public int GetQuantidade (){
+            return _quantidade;
+        }
+        public string GetNome (){
+            return _nome;
+        }
+
+        public void SetNome (string nome){
+            if(nome != null && nome.Length > 1){
+                _nome = nome;
+            }
             
         }
+        public double GetPreco(){
+            return _preco;
+        }
         public double ValorTotalEmEstoque(){
-            return Quantidade * Preco;
+            return _quantidade * _preco;
         }
 
         public void AdicionarProdutos( int quantidade) {
-            Quantidade += quantidade;
+            _quantidade += quantidade;
         }
         public void RemoverProdutos(int quantidade) {
-            Quantidade -= quantidade;
+            _quantidade -= quantidade;
         }
 
         override public string ToString(){
-            return Nome
+            return _nome
             +", Valor U$"
-            + Preco.ToString("F2", CultureInfo.InvariantCulture)
+            + _preco.ToString("F2", CultureInfo.InvariantCulture)
             + ", "
-            + Quantidade
+            + _quantidade
             + " unidades, Total: U$"
             + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
         }
