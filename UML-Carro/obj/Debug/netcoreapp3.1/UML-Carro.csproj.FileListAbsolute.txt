@@ -1,0 +1,11 @@
+C:\Users\DYGG\Desktop\csharp\UML-Carro\bin\Debug\netcoreapp3.1\UML-Carro.exe
+C:\Users\DYGG\Desktop\csharp\UML-Carro\bin\Debug\netcoreapp3.1\UML-Carro.deps.json
+C:\Users\DYGG\Desktop\csharp\UML-Carro\bin\Debug\netcoreapp3.1\UML-Carro.runtimeconfig.json
+C:\Users\DYGG\Desktop\csharp\UML-Carro\bin\Debug\netcoreapp3.1\UML-Carro.runtimeconfig.dev.json
+C:\Users\DYGG\Desktop\csharp\UML-Carro\bin\Debug\netcoreapp3.1\UML-Carro.dll
+C:\Users\DYGG\Desktop\csharp\UML-Carro\bin\Debug\netcoreapp3.1\UML-Carro.pdb
+C:\Users\DYGG\Desktop\csharp\UML-Carro\obj\Debug\netcoreapp3.1\UML-Carro.csprojAssemblyReference.cache
+C:\Users\DYGG\Desktop\csharp\UML-Carro\obj\Debug\netcoreapp3.1\UML-Carro.AssemblyInfoInputs.cache
+C:\Users\DYGG\Desktop\csharp\UML-Carro\obj\Debug\netcoreapp3.1\UML-Carro.AssemblyInfo.cs
+C:\Users\DYGG\Desktop\csharp\UML-Carro\obj\Debug\netcoreapp3.1\UML-Carro.dll
+C:\Users\DYGG\Desktop\csharp\UML-Carro\obj\Debug\netcoreapp3.1\UML-Carro.pdb
