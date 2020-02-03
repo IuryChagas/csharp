@@ -5,12 +5,53 @@ using static System.Console;
 namespace UML_Carro {
     class Program {
         static void Main (string[] args) {
+            Veiculo carro = new Veiculo ();
+
             CostumizarCarro ();
+            WriteLine (" #### Iniciando TestDrive! ###");
+            TestDriver(carro);
+        }
+        static void TestDriver (Veiculo veiculo) {
+            int choice;
+
+            WriteLine ();
+            WriteLine ("[1] Ligar: ");
+            WriteLine ("[2] Acelerar: ");
+            WriteLine ("[3] Frear: ");
+            WriteLine ("[4] Desligar: ");
+            WriteLine ("[5] Abastecer: ");
+
+            choice = int.Parse (Console.ReadLine ());
+            switch (choice) {
+                case 1:
+                    veiculo.Ligar();
+                break;
+                case 2:
+                    veiculo.Acelerar();
+                break;
+                case 3:
+                    veiculo.Frear();
+                break;
+                case 4:
+                    veiculo.Desligar();
+                break;
+                case 5:
+                    Write("Quantos deseja Abastecer: ");
+                    int abastecer = int.Parse(Console.ReadLine());
+                    veiculo.Abastecer(abastecer);
+                break;
+                default:
+                    System.Console.WriteLine("Opção inválida!");
+                    TestDriver (veiculo);
+                break;
+            }
+            TestDriver (veiculo);
+
         }
         static void CostumizarCarro () {
             Veiculo veiculo = new Veiculo ();
-            
-            WriteLine();
+
+            WriteLine ();
             WriteLine (" ## CUSTOMIZANDO CARRO ## ");
             WriteLine ();
             WriteLine ("[1] Audi: ");
@@ -23,9 +64,8 @@ namespace UML_Carro {
             WriteLine ();
             Write ("> Escolha uma marca: ");
             int caseSwitch = int.Parse (ReadLine ());
-         
-            List<Modelo> ListaModelos = new List<Modelo> () {
-            };
+
+            List<Modelo> ListaModelos = new List<Modelo> () { };
 
             ListaModelos.AddRange (
                 new List<Modelo> () {
@@ -42,37 +82,37 @@ namespace UML_Carro {
             switch (caseSwitch) {
 
                 case 1:
-                    DefinicaoDeVeiculo(veiculo, ListaModelos[0]);
+                    CustomizarModelo (veiculo, ListaModelos[0]);
                     break;
                 case 2:
-                    DefinicaoDeVeiculo(veiculo, ListaModelos[1]);
+                    CustomizarModelo (veiculo, ListaModelos[1]);
                     break;
                 case 3:
-                    DefinicaoDeVeiculo(veiculo, ListaModelos[2]);
+                    CustomizarModelo (veiculo, ListaModelos[2]);
                     break;
                 case 4:
-                    DefinicaoDeVeiculo(veiculo, ListaModelos[3]);
+                    CustomizarModelo (veiculo, ListaModelos[3]);
                     break;
                 case 5:
-                    DefinicaoDeVeiculo(veiculo, ListaModelos[4]);
+                    CustomizarModelo (veiculo, ListaModelos[4]);
                     break;
                 case 6:
-                    DefinicaoDeVeiculo(veiculo, ListaModelos[5]);
+                    CustomizarModelo (veiculo, ListaModelos[5]);
                     break;
                 case 7:
-                    DefinicaoDeVeiculo(veiculo, ListaModelos[6]);
+                    CustomizarModelo (veiculo, ListaModelos[6]);
                     break;
                 default:
                     WriteLine ("Opção inválida!");
                     break;
-                }
+            }
         }
-        static void DefinicaoDeVeiculo (Veiculo veiculo, Modelo modelo) {
+        static void CustomizarModelo (Veiculo veiculo, Modelo modelo) {
             int escolha = 0;
-            
+
             veiculo.Marca = modelo.Marca;
             Write ($"[1] {modelo.Modelo1}:\n[2] {modelo.Modelo2}:\n> Escolha um dos modelos: ");
-            escolha = int.Parse(Console.ReadLine());
+            escolha = int.Parse (Console.ReadLine ());
 
             if (escolha == 1) {
                 veiculo.Modelo = modelo.Modelo1;
@@ -81,46 +121,46 @@ namespace UML_Carro {
             } else {
                 WriteLine ("> Opção inválida! ");
             }
-            Clear();
-            WriteLine($"Marca: {veiculo.Marca}");
-            WriteLine($"Modelo: {veiculo.Modelo}");
+            Clear ();
+            WriteLine ($"Marca: {veiculo.Marca}");
+            WriteLine ($"Modelo: {veiculo.Modelo}");
 
-            CustomizarPlaca(veiculo);
-            CustomizarCor(veiculo);
+            CustomizarPlaca (veiculo);
+            CustomizarCor (veiculo);
         }
-        static void CustomizarPlaca (Veiculo veiculo){
-           System.Console.WriteLine();
+        static void CustomizarPlaca (Veiculo veiculo) {
+            System.Console.WriteLine ();
 
-           WriteLine ("## CUSTOMIZANDO PLACA ## ");
-           Write("> Escolha 3 Letras de A á Z: ");
-           string LetrasDaPlaca = Console.ReadLine().ToUpper();
+            WriteLine ("## CUSTOMIZANDO PLACA ## ");
+            Write ("> Escolha 3 Letras de A á Z: ");
+            string LetrasDaPlaca = Console.ReadLine ().ToUpper ();
 
-           Write("> Escolha 4 Números entre 0 à 9: ");
-           int NumerosDaPlaca = int.Parse(Console.ReadLine());
-           
-           veiculo.Placa = LetrasDaPlaca +"-"+ NumerosDaPlaca.ToString();
-           Clear();
-           WriteLine($"Marca: {veiculo.Marca}");
-           WriteLine($"Modelo: {veiculo.Modelo}");
-           WriteLine($"Placa: {veiculo.Placa}");
+            Write ("> Escolha 4 Números entre 0 à 9: ");
+            int NumerosDaPlaca = int.Parse (Console.ReadLine ());
+
+            veiculo.Placa = LetrasDaPlaca + "-" + NumerosDaPlaca.ToString ();
+            Clear ();
+            WriteLine ($"Marca: {veiculo.Marca}");
+            WriteLine ($"Modelo: {veiculo.Modelo}");
+            WriteLine ($"Placa: {veiculo.Placa}");
         }
-        static void CustomizarCor (Veiculo veiculo){
+        static void CustomizarCor (Veiculo veiculo) {
             WriteLine ("## CUSTOMIZANDO COR ## ");
-                WriteLine ();
-                WriteLine ("[1] Azul: ");
-                WriteLine ("[2] Preto: ");
-                WriteLine ("[3] Cinza: ");
-                WriteLine ("[4] Vermelho: ");
-                WriteLine ("[5] Roxo: ");
-                WriteLine ("[6] Marrom: ");
-                WriteLine ("[7] Branco: ");
-            Write("> Escolha uma das cores: ");
+            WriteLine ();
+            WriteLine ("[1] Azul: ");
+            WriteLine ("[2] Preto: ");
+            WriteLine ("[3] Cinza: ");
+            WriteLine ("[4] Vermelho: ");
+            WriteLine ("[5] Roxo: ");
+            WriteLine ("[6] Marrom: ");
+            WriteLine ("[7] Branco: ");
+            Write ("> Escolha uma das cores: ");
             int caseSwitch = int.Parse (ReadLine ());
 
             switch (caseSwitch) {
 
                 case 1:
-                     veiculo.Cor = "Azul";
+                    veiculo.Cor = "Azul";
                     break;
                 case 2:
                     veiculo.Cor = "Preto";
@@ -143,12 +183,14 @@ namespace UML_Carro {
                 default:
                     WriteLine ("Opção inválida!");
                     break;
-                }
-                Clear();
-                WriteLine($"Marca: {veiculo.Marca}");
-                WriteLine($"Modelo: {veiculo.Modelo}");
-                WriteLine($"Placa: {veiculo.Placa}");
-                WriteLine($"Cor: {veiculo.Cor}");
+            }
+            Clear ();
+            WriteLine ($"Marca: {veiculo.Marca}");
+            WriteLine ($"Modelo: {veiculo.Modelo}");
+            WriteLine ($"Placa: {veiculo.Placa}");
+            WriteLine ($"Cor: {veiculo.Cor}");
+
         }
+
     }
 }
