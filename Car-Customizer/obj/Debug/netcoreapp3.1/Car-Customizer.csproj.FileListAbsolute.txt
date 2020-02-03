@@ -1,0 +1,11 @@
+C:\Users\DYGG\Desktop\csharp\Car-Customizer\bin\Debug\netcoreapp3.1\Car-Customizer.exe
+C:\Users\DYGG\Desktop\csharp\Car-Customizer\bin\Debug\netcoreapp3.1\Car-Customizer.deps.json
+C:\Users\DYGG\Desktop\csharp\Car-Customizer\bin\Debug\netcoreapp3.1\Car-Customizer.runtimeconfig.json
+C:\Users\DYGG\Desktop\csharp\Car-Customizer\bin\Debug\netcoreapp3.1\Car-Customizer.runtimeconfig.dev.json
+C:\Users\DYGG\Desktop\csharp\Car-Customizer\bin\Debug\netcoreapp3.1\Car-Customizer.dll
+C:\Users\DYGG\Desktop\csharp\Car-Customizer\bin\Debug\netcoreapp3.1\Car-Customizer.pdb
+C:\Users\DYGG\Desktop\csharp\Car-Customizer\obj\Debug\netcoreapp3.1\Car-Customizer.csprojAssemblyReference.cache
+C:\Users\DYGG\Desktop\csharp\Car-Customizer\obj\Debug\netcoreapp3.1\Car-Customizer.AssemblyInfoInputs.cache
+C:\Users\DYGG\Desktop\csharp\Car-Customizer\obj\Debug\netcoreapp3.1\Car-Customizer.AssemblyInfo.cs
+C:\Users\DYGG\Desktop\csharp\Car-Customizer\obj\Debug\netcoreapp3.1\Car-Customizer.dll
+C:\Users\DYGG\Desktop\csharp\Car-Customizer\obj\Debug\netcoreapp3.1\Car-Customizer.pdb
