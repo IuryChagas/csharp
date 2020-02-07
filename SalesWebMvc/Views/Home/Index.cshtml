@@ -3,6 +3,13 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 class="display-4">My new MVC</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>@ViewData["Message"]</p>
+    <p>@ViewData["Description"]</p> 
+
+    <address>
+        <p><strong>Name: </strong>@ViewData["Nome"]</p>
+        <strong>More information:</strong> <a href="mailto:iurychagas@icloud.com">@ViewData["email"]</a>
+    </address>
 </div>
